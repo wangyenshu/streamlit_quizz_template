@@ -19,15 +19,7 @@ st.markdown("""
 div.stButton > button:first-child {
     display: block;
     margin: 0 auto;
-#baseButton-header .st-emotion-cache-1huvf7z ef3psqc6 #baseButton-header .st-emotion-cache-1huvf7z ef3psqc6{
-        display: none;
-    }
-.stDeployButton {
-            visibility: hidden;
-        }
-[data-testid="stStatusWidget"] {
-    visibility: hidden;
-}
+
 </style>
 """, unsafe_allow_html=True)
 
