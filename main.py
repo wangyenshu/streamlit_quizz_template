@@ -26,7 +26,7 @@ for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
 # Load quiz data
-with open('content/quiz_data.json', 'r', encoding='utf-8') as f:
+with open('content/sat.json', 'r', encoding='utf-8') as f:
     quiz_data = json.load(f)
 
 def restart_quiz():
