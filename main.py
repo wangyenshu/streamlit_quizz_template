@@ -21,7 +21,7 @@ div.stButton > button:first-child {
 """, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
-default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':1}
+default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':11}
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
@@ -104,7 +104,7 @@ if st.session_state.answer_submitted:
         st.button('Next', on_click=next_question)
     else:
         st.write(f"Quiz completed! Your score is: {st.session_state.score} / {st.session_state.maxcounter * 10}")
-        if st.session_state.score == (st.session_state.maxcounter) * 10:
+        if st.session_state.score > (st.session_state.maxcounter-2) * 10:
             st.write("secret message here")
             
         if st.button('Restart', on_click=restart_quiz):
