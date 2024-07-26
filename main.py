@@ -74,7 +74,7 @@ st.title(f"{question_item['question']['question']}")
 st.markdown(""" ___""")
 
 # Answer selection
-options = [f"A: {question_item['question']['choices']['A']}]
+options = [A: question_item['question']['choices']['A']]
 correct_answer = question_item['question']['correct_answer']
 
 if st.session_state.answer_submitted:
