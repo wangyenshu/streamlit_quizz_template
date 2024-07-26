@@ -70,11 +70,11 @@ question_item = quiz_data['math'][st.session_state.current_index]
 st.subheader(f"Question {st.session_state.counter + 1}")
 st.title(f"{question_item['question']['question']}")
 # st.write(question_item['information'])
-
+st.write(A: question_item['question']['choices']['A'])
 st.markdown(""" ___""")
 
 # Answer selection
-options = [A: question_item['question']['choices']['A']]
+options = question_item['question']['choices']
 correct_answer = question_item['question']['correct_answer']
 
 if st.session_state.answer_submitted:
