@@ -44,7 +44,7 @@ def submit_answer():
         # Mark the answer as submitted
         st.session_state.answer_submitted = True
         # Check if the selected option is correct
-        if st.session_state.selected_option == quiz_data[st.session_state.current_index]['answer']:
+        if st.session_state.selected_option == quiz_data['math'][st.session_state.current_index]['question']['correct_answer']
             st.session_state.score += 10
     else:
         # If no option selected, show a message and do not mark as submitted
