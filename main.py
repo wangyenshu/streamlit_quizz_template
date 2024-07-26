@@ -57,7 +57,7 @@ def next_question():
     st.session_state.answer_submitted = False
 
 # Title and description
-st.title("Streamlit Quiz App")
+st.title("Answer the Question to Get the Secret Code. Only One Mistake is Allowed.")
 
 # Progress bar
 progress_bar_value = (st.session_state.counter + 1) / st.session_state.maxcounter
