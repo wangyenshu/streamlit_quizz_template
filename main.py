@@ -19,9 +19,7 @@ st.markdown("""
 div.stButton > button:first-child {
     display: block;
     margin: 0 auto;
-.css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
+.st-emotion-cache-12fmjuu .ezrtsby2 {
         display: none;
     }
 </style>
