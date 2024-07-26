@@ -2,11 +2,7 @@ import streamlit as st
 import json
 import random
 
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
+
 
 def run():
     st.set_page_config(
@@ -29,7 +25,7 @@ div.stButton > button:first-child {
         display: none;
     }
 </style>
-""", hide_github_icon, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
 default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':2}
