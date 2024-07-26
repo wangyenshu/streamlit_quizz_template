@@ -70,6 +70,8 @@ question_item = quiz_data['math'][st.session_state.current_index]
 st.subheader(f"Question {st.session_state.counter + 1}")
 st.title(f"{question_item['question']['question']}")
 # st.write(question_item['information'])
+if st.session_state.counter == 0:
+    st.write("This is demo question. The answer is C")
 st.write("A:", question_item['question']['choices']['A'])
 st.write("B:", question_item['question']['choices']['B'])
 st.write("C:", question_item['question']['choices']['C'])
@@ -102,7 +104,7 @@ if st.session_state.answer_submitted:
         st.button('Next', on_click=next_question)
     else:
         st.write(f"Quiz completed! Your score is: {st.session_state.score} / {st.session_state.maxcounter * 10}")
-        if st.session_state.score > (st.session_state.maxcounter - 2) * 10:
+        if st.session_state.score > (st.session_state.maxcounter) * 10:
             st.markdown("secret message here")
             
         if st.button('Restart', on_click=restart_quiz):
