@@ -51,7 +51,7 @@ def submit_answer():
         st.warning("Please select an option before submitting.")
 
 def next_question():
-    st.session_state.current_index = random.randint(1,len(quiz_data))
+    st.session_state.current_index = random.randint(1,len(quiz_data['math']))
     st.session_state.counter +=1
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
