@@ -70,10 +70,10 @@ question_item = quiz_data['math'][st.session_state.current_index]
 st.subheader(f"Question {st.session_state.counter + 1}")
 st.title(f"{question_item['question']['question']}")
 # st.write(question_item['information'])
-st.write(- "A:", question_item['question']['choices']['A']
-         - "B:", question_item['question']['choices']['B']
-         - "C:", question_item['question']['choices']['C']
-         - "D:", question_item['question']['choices']['D'])
+st.write("A:", question_item['question']['choices']['A'])
+st.write("B:", question_item['question']['choices']['B'])
+st.write("C:", question_item['question']['choices']['C'])
+st.write("D:", question_item['question']['choices']['D'])
 st.markdown(""" ___""")
 
 # Answer selection
