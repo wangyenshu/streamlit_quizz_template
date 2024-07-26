@@ -35,7 +35,7 @@ def restart_quiz():
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
     st.session_state.counter = 0
-    st.session_state.maxcounter = 11
+    st.session_state.maxcounter = 2
 
 def submit_answer():
 
