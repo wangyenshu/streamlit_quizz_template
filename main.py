@@ -66,7 +66,8 @@ st.progress(progress_bar_value)
 
 # Display the question and answer options
 question_item = quiz_data['math'][st.session_state.current_index]
-st.subheader(f"Question {st.session_state.current_index + 1}")
+#st.subheader(f"Question {st.session_state.current_index + 1}")
+st.subheader(f"Question {st.session_state.counter + 1}")
 st.title(f"{question_item['question']['question']}")
 # st.write(question_item['information'])
 
