@@ -94,7 +94,7 @@ st.markdown(""" ___""")
 
 # Submission button and response logic
 if st.session_state.answer_submitted:
-    if st.session_state.counter < maxcounter - 1:
+    if st.session_state.counter < st.session_state.maxcounter - 1:
         st.button('Next', on_click=next_question)
     else:
         st.write(f"Quiz completed! Your score is: {st.session_state.score} / {st.session_state.maxcounter * 10}")
