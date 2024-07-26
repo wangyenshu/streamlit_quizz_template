@@ -2,13 +2,7 @@ import streamlit as st
 import json
 import random
 
-# Add custom CSS to hide the GitHub icon
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 
 def run():
     st.set_page_config(
@@ -25,6 +19,12 @@ st.markdown("""
 div.stButton > button:first-child {
     display: block;
     margin: 0 auto;
+#GithubIcon {
+  visibility: hidden;
+}
+#MainMenu {
+  visibility: hidden;
+}
 </style>
 """, unsafe_allow_html=True)
 
