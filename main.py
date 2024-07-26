@@ -21,7 +21,7 @@ div.stButton > button:first-child {
 """, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
-default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':11}
+default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':1}
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
