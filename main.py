@@ -25,6 +25,9 @@ div.stButton > button:first-child {
 .stDeployButton {
             visibility: hidden;
         }
+[data-testid="stStatusWidget"] {
+    visibility: hidden;
+}
 </style>
 """, unsafe_allow_html=True)
 
