@@ -105,5 +105,5 @@ if st.session_state.answer_submitted:
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
-    if st.session_state.current_index < len(quiz_data):
+    if st.session_state.counter < st.session_state.maxcounter:
         st.button('Submit', on_click=submit_answer)
