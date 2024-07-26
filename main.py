@@ -2,6 +2,14 @@ import streamlit as st
 import json
 import random
 
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 def run():
     st.set_page_config(
         page_title="Streamlit quizz app",
