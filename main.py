@@ -67,14 +67,14 @@ st.progress(progress_bar_value)
 # Display the question and answer options
 question_item = quiz_data['math'][st.session_state.current_index]
 st.subheader(f"Question {st.session_state.current_index + 1}")
-st.title(f"{question_item['question']}")
-st.write(question_item['information'])
+st.title(f"{question_item['question']['question']}")
+# st.write(question_item['information'])
 
 st.markdown(""" ___""")
 
 # Answer selection
-options = question_item['options']
-correct_answer = question_item['answer']
+options = question_item['question']['choices']
+correct_answer = question_item['question']['correct_answer']
 
 if st.session_state.answer_submitted:
     for i, option in enumerate(options):
