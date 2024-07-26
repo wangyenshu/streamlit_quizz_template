@@ -65,7 +65,7 @@ st.metric(label="Score", value=f"{st.session_state.score} / {st.session_state.ma
 st.progress(progress_bar_value)
 
 # Display the question and answer options
-question_item = quiz_data[math][st.session_state.current_index]
+question_item = quiz_data['math'][st.session_state.current_index]
 st.subheader(f"Question {st.session_state.current_index + 1}")
 st.title(f"{question_item['question']}")
 st.write(question_item['information'])
