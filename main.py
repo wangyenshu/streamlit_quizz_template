@@ -22,6 +22,9 @@ div.stButton > button:first-child {
 #baseButton-header .st-emotion-cache-1huvf7z ef3psqc6 #baseButton-header .st-emotion-cache-1huvf7z ef3psqc6{
         display: none;
     }
+.stDeployButton {
+            visibility: hidden;
+        }
 </style>
 """, unsafe_allow_html=True)
 
