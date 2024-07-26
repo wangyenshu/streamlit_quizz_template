@@ -2,7 +2,11 @@ import streamlit as st
 import json
 import random
 
-
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
 
 def run():
     st.set_page_config(
@@ -24,9 +28,6 @@ div.stButton > button:first-child {
     .viewerBadge_text__1JaDK {
         display: none;
     }
-#GithubIcon {
-  visibility: hidden;
-}
 </style>
 """, hide_github_icon, unsafe_allow_html=True)
 
