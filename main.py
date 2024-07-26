@@ -105,7 +105,7 @@ if st.session_state.answer_submitted:
     else:
         st.write(f"Quiz completed! Your score is: {st.session_state.score} / {st.session_state.maxcounter * 10}")
         if st.session_state.score > (st.session_state.maxcounter) * 10:
-            st.markdown("secret message here")
+            st.write("secret message here")
             
         if st.button('Restart', on_click=restart_quiz):
             pass
