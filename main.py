@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import random
 
 def run():
     st.set_page_config(
@@ -20,7 +21,7 @@ div.stButton > button:first-child {
 """, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
-default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False}
+default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'counter':0, 'maxcounter':11}
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
@@ -33,6 +34,8 @@ def restart_quiz():
     st.session_state.score = 0
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
+    st.session_state.counter = 0
+    st.session_state.maxcounter = 11
 
 def submit_answer():
 
@@ -48,7 +51,8 @@ def submit_answer():
         st.warning("Please select an option before submitting.")
 
 def next_question():
-    st.session_state.current_index += 1
+    st.session_state.current_index = random.randint(1,len(quiz_data))
+    st.session_state.counter +=1
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
 
@@ -56,8 +60,8 @@ def next_question():
 st.title("Streamlit Quiz App")
 
 # Progress bar
-progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)
-st.metric(label="Score", value=f"{st.session_state.score} / {len(quiz_data) * 10}")
+progress_bar_value = (st.session_state.counter + 1) / st.session_state.maxcounter
+st.metric(label="Score", value=f"{st.session_state.score} / {st.session_state.maxcounter * 10}")
 st.progress(progress_bar_value)
 
 # Display the question and answer options
@@ -93,7 +97,10 @@ if st.session_state.answer_submitted:
     if st.session_state.current_index < len(quiz_data) - 1:
         st.button('Next', on_click=next_question)
     else:
-        st.write(f"Quiz completed! Your score is: {st.session_state.score} / {len(quiz_data) * 10}")
+        st.write(f"Quiz completed! Your score is: {st.session_state.score} / {st.session_state.maxcounter * 10}")
+        if st.session_state.score > (st.session_state.maxcounter - 1) * 10
+            st.markdown("secret message here")
+            st.code(secret, language="python")
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
